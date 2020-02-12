@@ -27,4 +27,16 @@ public class QueueUsingCircularArray {
         System.out.println("Queue of size " + size + " created.");
 
     }
+
+    public void deleteQueue() {
+        if (!isQueueCreated) {
+            System.out.println("Create a queue first");
+        } else {
+            myQueue = null;
+            isQueueCreated = false;
+            System.out.println("Queue deleted");
+        }
+
+    }
+
 }
