@@ -99,4 +99,28 @@ public class QueueUsingCircularArray {
     }
 
 
+    public void display() {
+        if (!isQueueCreated) {
+            System.out.println("Create a queue first");
+            return;
+        }
+        if (isEmpty()) {
+            System.out.println("Queue is empty - Underflow");
+            return;
+        }
+        if (top < beginning) {
+            for (int i = beginning; i <= top + myQueue.length; i++) {
+                System.out.print(myQueue[i % (myQueue.length)] + " ");
+
+            }
+            System.out.println();
+        } else {
+            for (int i = beginning; i <= top; i++) {
+                System.out.print(myQueue[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
