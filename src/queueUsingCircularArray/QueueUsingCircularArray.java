@@ -122,5 +122,17 @@ public class QueueUsingCircularArray {
         }
     }
 
+    public void peekInQueue() {
+        if (!isQueueCreated) {
+            System.out.println("Create a queue first");
+            return;
+        }
+        if (isEmpty()) {
+            System.out.println("Queue is empty - Underflow");
+            return;
+        }
+        System.out.println(myQueue[beginning]);
+    }
+
 
 }
