@@ -39,4 +39,9 @@ public class QueueUsingCircularArray {
 
     }
 
+    //helper method
+    public boolean isFull() {
+        return (beginning == 0 && top == myQueue.length - 1) || top == beginning - 1;
+    }
+
 }
