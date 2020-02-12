@@ -62,7 +62,6 @@ public class QueueUsingCircularArray {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter element");
         int element = Integer.parseInt(scanner.nextLine().trim());
-        scanner.close();
 
         if (beginning == -1) {
             beginning++;
