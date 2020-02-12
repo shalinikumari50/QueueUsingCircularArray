@@ -49,4 +49,31 @@ public class QueueUsingCircularArray {
         return top == -1;
     }
 
+    public void enqueue() throws NumberFormatException {
+        if (!isQueueCreated) {
+            System.out.println("Create a queue first");
+            return;
+        }
+        if (isFull()) {
+            System.out.println("Queue is full - Overflow");
+            return;
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter element");
+        int element = Integer.parseInt(scanner.nextLine().trim());
+        scanner.close();
+
+        if (beginning == -1) {
+            beginning++;
+        }
+        top++;
+        if (top == myQueue.length) {
+            top = 0;
+        }
+        myQueue[top] = element;
+        System.out.println("Element inserted at index " + top);
+    }
+
+
 }
