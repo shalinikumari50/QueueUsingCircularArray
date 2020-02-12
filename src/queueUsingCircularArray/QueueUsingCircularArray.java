@@ -134,5 +134,18 @@ public class QueueUsingCircularArray {
         System.out.println(myQueue[beginning]);
     }
 
+    public void printMenu() {
+        System.out.println("press\n" +
+                "0 - to exit\n" +
+                "1 - to create queue\n" +
+                "2 - to insert element\n" +
+                "3 - to delete element\n" +
+                "4 - to peek in queue\n" +
+                "5 - to display queue\n" +
+                "6 - to delete queue\n" +
+                "7 - to print menu");
+    }
+
+
 
 }
