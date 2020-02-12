@@ -44,4 +44,9 @@ public class QueueUsingCircularArray {
         return (beginning == 0 && top == myQueue.length - 1) || top == beginning - 1;
     }
 
+    //helper method
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
 }
