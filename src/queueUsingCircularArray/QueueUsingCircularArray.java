@@ -75,5 +75,28 @@ public class QueueUsingCircularArray {
         System.out.println("Element inserted at index " + top);
     }
 
+    public void dequeue() {
+        if (!isQueueCreated) {
+            System.out.println("Create a queue first");
+            return;
+        }
+        if (isEmpty()) {
+            System.out.println("Queue is empty - Underflow");
+            return;
+        }
+        if (beginning == myQueue.length) {
+            beginning = 0;
+        }
+        beginning++;
+
+        System.out.println("Element deleted from index " + (beginning - 1));
+        if (beginning == top + 1) {
+            beginning = -1;
+            top = -1;
+        }
+
+
+    }
+
 
 }
